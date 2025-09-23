@@ -53,45 +53,85 @@ mark {
 /* ===== Header ===== */
 .page-header {
   display: grid;
-  gap: 1.75rem;
-  margin-bottom: 3.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(2.5rem, 6vw, 5.5rem);
+  row-gap: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: clamp(3rem, 6vw, 4.25rem);
 }
 
-.header-primary {
+.header-column {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 1.5rem;
+}
+
+.header-column--secondary {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.course-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.course-number {
+  margin: 0;
+  font-size: clamp(3rem, 6.5vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: 0.015em;
 }
 
 .course-title {
   margin: 0;
-  font-size: clamp(2.25rem, 5vw, 3rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: clamp(2.1rem, 5.5vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .course-term {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.header-details {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  font-size: clamp(1.2rem, 2.6vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .detail-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.detail-item + .detail-item {
-  margin-top: 0.35rem;
+.detail-link {
+  font-weight: 600;
+}
+
+.detail-list--instructor {
+  align-items: flex-end;
+}
+
+.header-column--secondary .detail-item,
+.header-column--secondary .detail-link {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .page-header {
+    grid-template-columns: 1fr;
+  }
+
+  .header-column--secondary {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .detail-list--instructor {
+    align-items: flex-start;
+  }
 }
 
 /* ===== Layout ===== */
