@@ -1,0 +1,54 @@
+/* ===== Base ===== */
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 40px 50px;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 20px 0 10px 0;
+}
+
+/* ===== Paragraphs & Lists ===== */
+p, li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 0 0 20px 20px;
+}
+
+/* ===== Two-column Layout ===== */
+.container {
+  column-count: 2;
+}
+
+.split-item {
+  break-inside: avoid; /* avoid splitting sections */
+  margin-bottom: 25px;
+}
+
+/* ===== Hover Effects ===== */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+  cursor: pointer;
+  opacity: 0.7;
+}
