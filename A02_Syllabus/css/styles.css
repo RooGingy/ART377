@@ -7,7 +7,8 @@
 body {
   margin: 0;
   font-family: 'Source Sans 3', sans-serif;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
   color: #000;
   background: #fff;
 }
@@ -15,7 +16,7 @@ body {
 .page {
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 32px 64px;
+  padding: 56px 48px 96px;
 }
 
 a {
@@ -29,61 +30,80 @@ a:focus {
 }
 
 mark {
-  background: none;
+  background: transparent;
   font-weight: 600;
 }
 
 .page-header {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 32px;
-  margin-bottom: 56px;
+  gap: 48px;
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid #000;
 }
 
-.header-column {
-  flex: 1 1 0;
+.header-primary {
+  flex: 0 1 60%;
 }
 
-.header-column.secondary {
+.header-secondary {
+  flex: 0 1 40%;
   text-align: right;
-}
-
-.course-heading {
-  margin-bottom: 16px;
 }
 
 .course-number {
   margin: 0;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.05;
 }
 
 .course-title {
   margin: 8px 0 0;
   font-size: 36px;
   font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
 }
 
-.course-term {
-  margin: 0 0 16px;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 3px;
+.meeting-info {
+  margin-top: 24px;
 }
 
 .detail-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.detail-list li {
+.meeting-list li {
+  font-size: 18px;
   margin-bottom: 6px;
+  line-height: 1.4;
 }
 
-.detail-list li:last-child {
+.meeting-list li:last-child {
+  margin-bottom: 0;
+}
+
+.course-term {
+  margin: 0 0 24px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+}
+
+.contact-list li:last-child {
   margin-bottom: 0;
 }
 
@@ -91,18 +111,26 @@ mark {
   font-weight: 600;
 }
 
-.layout {
+.page-columns {
   display: flex;
-  gap: 32px;
   align-items: flex-start;
+  gap: 56px;
 }
 
 .column {
   flex: 1 1 0;
 }
 
+.primary-column {
+  flex-basis: 58%;
+}
+
+.secondary-column {
+  flex-basis: 42%;
+}
+
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .section:last-child {
@@ -113,6 +141,7 @@ mark {
   margin: 0 0 16px;
   font-size: 24px;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .section-note {
@@ -131,7 +160,7 @@ mark {
 
 .item-list {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .item-list li {
@@ -143,7 +172,7 @@ mark {
 }
 
 .subsection {
-  margin-top: 24px;
+  margin-top: 28px;
 }
 
 .subsection:first-child {
@@ -154,27 +183,48 @@ mark {
   margin: 0 0 12px;
   font-size: 18px;
   font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
 .subsection p {
-  margin: 0;
+  margin: 0 0 16px;
 }
 
-@media (max-width: 800px) {
+.subsection p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
   .page {
-    padding: 32px 20px 48px;
+    padding: 40px 24px 72px;
   }
 
   .page-header {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
     text-align: left;
   }
 
-  .header-column.secondary {
+  .header-secondary {
     text-align: left;
   }
 
-  .layout {
+  .course-number {
+    font-size: 44px;
+  }
+
+  .course-title {
+    font-size: 32px;
+  }
+
+  .page-columns {
     flex-direction: column;
+    gap: 40px;
+  }
+
+  .primary-column,
+  .secondary-column {
+    flex-basis: auto;
   }
 }
