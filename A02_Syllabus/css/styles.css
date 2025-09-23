@@ -1,0 +1,177 @@
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 64px 80px;
+}
+
+@media (max-width: 960px) {
+  .page {
+    padding: 40px 28px 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 20px 48px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+mark {
+  background: transparent;
+  font-weight: 600;
+}
+
+/* ===== Header ===== */
+.page-header {
+  display: grid;
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.header-primary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.course-title {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.course-term {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.header-details {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.detail-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-item + .detail-item {
+  margin-top: 0.35rem;
+}
+
+/* ===== Layout ===== */
+.layout {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 880px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ===== Sections ===== */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.section-note {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subsection + .subsection {
+  margin-top: 1.75rem;
+}
+
+.subsection-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* ===== Typography ===== */
+p {
+  margin: 0;
+}
+
+.item-list {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.item-list li + li {
+  margin-top: 0.5rem;
+}
+
+.column .item-list:last-child {
+  margin-bottom: 0;
+}
+
