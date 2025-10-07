@@ -1,0 +1,81 @@
+/* Media Queries for Responsive Design */
+
+/* Desktop/Full Screen (992px and up) */
+@media screen and (min-width: 992px) {
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+
+    .paragraph-container p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* Hide helmet image on full screen */
+    #helmet-image {
+        display: none;
+    }
+}
+
+/* Tablet (511px - 991px) */
+@media screen and (max-width: 991px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 600px;
+        margin: 40px auto;
+    }
+
+    .full-length img {
+        width: 90%;
+    }
+
+    .paragraph-container p {
+        padding: 0 15px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    /* Hide helmet image on tablet */
+    #helmet-image {
+        display: none;
+    }
+}
+
+/* Phone (510px and below) */
+@media (max-width: 510px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .full-length img {
+        width: 95%;
+    }
+
+    .paragraph-container p {
+        padding: 0 10px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    /* Hide bike image and show helmet on phone */
+    #nightster-image {
+        display: none;
+    }
+
+    #helmet-image {
+        display: block;
+    }
+}

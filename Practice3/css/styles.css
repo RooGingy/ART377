@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* typography stuff */
+  font-size: 16px;
+}
+
+
+.container {
+  /* display stuff */
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+
+  /* posisioning stuff */
+
+  /* box modeling stuff */
+
+
+  /* typography stuff */
+
+  /* manipulation stuff */
+
+  /* miscellaneous stuff */
+}
+
+.item {
+  /* display stuff */
+  display: grid;
+
+  /* posisioning stuff */
+
+  /* box modeling stuff */
+  border: 1px solid black;
+  background-color: lightgreen;
+
+
+  /* posisioning stuff */
+
+
+  /* box modeling stuff */
+
+
+  /* typography stuff */
+  text-align: center;
+
+  /* manipulation stuff */
+
+  /* miscellaneous stuff */
+}
