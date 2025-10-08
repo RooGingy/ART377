@@ -1,0 +1,88 @@
+/* Base Styles */
+html {
+    background-color: #1E1E1E;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "area1 area1 area1 area1"
+        "area2 area2 area2 area2"
+        "area3 area4 area5 area6";
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#helmet-image {
+    display: none;
+}
+
+/* Grid Area Assignments */
+.area1 { grid-area: area1; }
+.area2 { grid-area: area2; }
+.area3 { grid-area: area3; }
+.area4 { grid-area: area4; }
+.area5 { grid-area: area5; }
+.area6 { grid-area: area6; }
+
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "area1 area1"
+            "area2 area2"
+            "area3 area4"
+            "area5 area6";
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+            "area1"
+            "area2"
+            "area3"
+            "area4"
+            "area5"
+            "area6";
+    }
+
+    #nightster-image {
+        display: none;
+    }
+
+    #helmet-image {
+        display: block;
+        margin-top: 20px;
+    }
+}
